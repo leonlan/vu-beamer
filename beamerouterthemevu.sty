@@ -1,56 +1,80 @@
+% Enter presentation mode for the LaTeX compiler, applicable specifically for Beamer
 \mode<presentation>
 
+% Set color for author in the header/footer
 \setbeamercolor{author in head/foot}{parent=palette tertiary}
+
+% Set color for title in the header/footer
 \setbeamercolor{title in head/foot}{parent=palette secondary}
+
+% Set color for date in the header/footer
 \setbeamercolor{date in head/foot}{parent=palette primary}
+
+% Set color for section in the header/footer
 \setbeamercolor{section in head/foot}{parent=palette tertiary}
+
+% Set color for subsection in the header/footer
 \setbeamercolor{subsection in head/foot}{parent=palette primary}
+
+% Set color for navigation symbols in the header/footer
 \setbeamercolor{navigtion symbols in head/foot}{parent=palette primary}
+
+% Set color for logo in the header/footer
 \setbeamercolor{logo in head/foot}{parent=palette quaternary}
 
+% Set the color of navigation symbols
 \setbeamercolor*{navigation symbols}{parent=palette primary}
+
+% Set the color of dimmed navigation symbols
 \setbeamercolor*{navigation symbols dimmed}{parent=palette primary,fg=parent.fg!20!parent.bg}
 
+% Set text margin from the left
 \setbeamersize{text margin left=0.6cm}
+
+% Set text margin from the right
 \setbeamersize{text margin right=0.6cm}
 
+% Define template for left sidebar, currently empty
 \defbeamertemplate*{sidebar left}{}{
 
 }
 
+% Define the template for the footline
 \defbeamertemplate*{footline}{}{
 	\leavevmode
 	\begin{beamercolorbox}[wd=\paperwidth,ht=4ex,dp=2.5ex,center]{date in head/foot}
 	\begin{columns}[t]
 	\column{.44\textwidth}
 	\begin{minipage}[c]{2cm}
-	\textcolor{white}{\includegraphics[width=1cm]{vu-logo.png}}
+	\textcolor{white}{\includegraphics[width=1cm]{vu-logo.png}}  % Insert logo image
     \vspace{0.11cm}
 	\end{minipage}
 	\column{.44\textwidth}
-	\hfill \insertframenumber{} / \inserttotalframenumber
+	\hfill \insertframenumber{} / \inserttotalframenumber  % Insert page count
 	\end{columns}
 	\end{beamercolorbox}
-	\vskip0pt
+	\vskip0pt  % Adjust skip after the beamercolor box
 }
 
+% Define the template for the minimal footline
 \defbeamertemplate*{minimal footline}{}{
 	\leavevmode
 	\begin{beamercolorbox}[wd=\paperwidth,ht=4ex,dp=2.5ex,center]{date in head/foot}
 	\begin{columns}[t]
 	\column{.44\textwidth}
 	\begin{minipage}[c]{2cm}
-	\textcolor{white}{\includegraphics[width=1cm]{vu-logo.png}}
+	\textcolor{white}{\includegraphics[width=1cm]{vu-logo.png}}  % Insert logo image
      \vspace{0.11cm}
 	\end{minipage}
 	\column{.44\textwidth}
 	\end{columns}
 	\end{beamercolorbox}
-	\vskip0pt
+	\vskip0pt  % Adjust skip after the beamercolor box
 }
 
-% this normally contains the navigation links
+% Define template for right sidebar, currently contains no navigation links
 \defbeamertemplate*{sidebar right}{}{}
 
+% Exit the presentation mode to compile all the LaTeX contents
 \mode
 <all>

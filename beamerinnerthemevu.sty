@@ -1,36 +1,51 @@
+% Declare 'shadow' as a theme option for Beamer with default value being true
 \DeclareOptionBeamer{shadow}[true]{\def\beamer@themerounded@shadow{#1}}
+
+% Set default for the 'shadow' option to false
 \ExecuteOptionsBeamer{shadow=false}
 
+% Declare 'verticalbar' as another theme option for Beamer with default value being true
 \DeclareOptionBeamer{verticalbar}[true]{\def\beamer@themeVU@verticalbar{#1}}
+
+% Set default for the 'verticalbar' option to false
 \ExecuteOptionsBeamer{verticalbar=false}
 
+% Process these options in Beamer
 \ProcessOptionsBeamer
 
-%% convert options to tex booleans
+% Convert 'verticalbar' option to a TeX boolean condition for use later in the template
 \newif\ifverticalbar\csname verticalbar\beamer@themeVU@verticalbar\endcsname
 
+% Enter presentation mode for the LaTeX compiler, applicable specifically for Beamer
 \mode<presentation>
 
+% Define custom 'title page' template
 \defbeamertemplate*{title page}{}{
 	\begin{center}
-		\vspace{0.8cm}
-		{\color{vuBlue}\Large\inserttitle}\\
-		\vspace{0.5cm}
-		{\small\insertauthor}\\
-		\vspace{0.5cm}
-		{\scriptsize\insertinstitute}\\
-		\vspace{0.5cm}
-		{\scriptsize\insertdate}
+		\vspace{0.8cm}                          % Add vertical space
+		{\color{vuBlue}\Large\inserttitle}\\    % Insert title in large font, colored 'vuBlue'
+		\vspace{0.5cm}                          % Add vertical space
+		{\small\insertauthor}\\                 % Insert author(s) in small font size
+		\vspace{0.5cm}                          % Add vertical space
+		{\scriptsize\insertinstitute}\\         % Insert institute in scriptsize font size
+		\vspace{0.5cm}                          % Add vertical space
+		{\scriptsize\insertdate}                % Insert date in scriptsize font size
 	\end{center}
 }
 
-
+% Add horizontal spacing in 'frametitle' based on 'verticalbar' condition
 \addtobeamertemplate{frametitle}{%
 \ifverticalbar\hspace*{0.92cm}\else\hspace*{0.03cm}\fi}
 
+% Set block appearance to being 'rounded'
 \setbeamertemplate{blocks}[rounded][]
+
+% Set item bullets appear as 'circles'
 \setbeamertemplate{items}[circle]
+
+% Set section/subsection display in TOC to being 'circle'-styled
 \setbeamertemplate{sections/subsections in toc}[circle]
 
+% Exit the presentation mode to compile all the LaTeX contents
 \mode
 <all>

@@ -1,24 +1,20 @@
-% TU Delft beamer template
-% Author: Erwin Walraven (initial version was created by Maarten Abbink)
-% Delft Universiy of Technology
-
 \DeclareOptionBeamer{shadow}[true]{\def\beamer@themerounded@shadow{#1}}
 \ExecuteOptionsBeamer{shadow=false}
 
-\DeclareOptionBeamer{verticalbar}[true]{\def\beamer@themeTUD@verticalbar{#1}}
+\DeclareOptionBeamer{verticalbar}[true]{\def\beamer@themeVU@verticalbar{#1}}
 \ExecuteOptionsBeamer{verticalbar=false}
 
 \ProcessOptionsBeamer
 
 %% convert options to tex booleans
-\newif\ifverticalbar\csname verticalbar\beamer@themeTUD@verticalbar\endcsname
+\newif\ifverticalbar\csname verticalbar\beamer@themeVU@verticalbar\endcsname
 
 \mode<presentation>
 
 \defbeamertemplate*{title page}{}{
 	\begin{center}
 		\vspace{0.8cm}
-		{\color{tudCyan}\Large\inserttitle}\\
+		{\color{vuBlue}\Large\inserttitle}\\
 		\vspace{0.5cm}
 		{\small\insertauthor}\\
 		\vspace{0.5cm}

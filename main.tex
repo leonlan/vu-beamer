@@ -1,0 +1,134 @@
+\documentclass[aspectratio=43]{beamer}
+
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{
+  amsmath,
+  amssymb,
+  amsfonts,
+  mathtools
+}
+\usepackage{vu-beamer/vu-beamer}
+
+% Title page information
+\title[VU Beamer template using corporate identity]{
+Beamer template using the corporate identity \\ of the Vrije Universiteit Amsterdam
+}
+\institute[VU Amsterdam and CWI]{
+\inst{1} Vrije Universiteit Amsterdam, The Netherlands
+\and
+\inst{2} Centrum van Wiskunde en Informatica, The Netherlands
+}
+\author[Lan et al.]{
+  Leon Lan\inst{1}
+  \and
+  Joost Berkhout\inst{1}
+  \and \\
+  Sandjai Bhulai\inst{1}
+  \and
+  Rob van der Mei\inst{1,2}
+}
+\date{\today}
+
+
+\begin{document}
+
+\section{Title page}
+\begin{frame}
+  \setbeamertemplate{footline}
+  \frame{\titlepage}
+\end{frame}
+
+
+\section{Outline}
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+\section{Lists}
+\begin{frame}{Lists}
+
+This is an unordered list:
+\begin{itemize}
+    \item Item 1
+    \item Item 2
+    \item Item 3
+\end{itemize}
+
+and this is an ordered list:
+\begin{enumerate}
+    \item Item 1
+    \item Item 2
+    \item Item 3
+\end{enumerate}
+
+\end{frame}
+
+
+\section{Blocks}
+\begin{frame}{Blocks}
+    \begin{block}{Standard Block}
+        This is a standard block.
+    \end{block}
+    \begin{alertblock}{Alert Message}
+        This block presents alert message.
+    \end{alertblock}
+    \begin{exampleblock}{An example of typesetting tool}
+        Example: MS Word, \LaTeX{}
+    \end{exampleblock}
+\end{frame}
+
+
+\section{Multicolumns}
+\begin{frame}{Multicolumns}
+  \begin{columns}[T] % The "c" option is for center
+    \begin{column}{.5\textwidth}
+      \begin{itemize}
+        \item Item 1
+        \item Item 2
+      \end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \begin{enumerate}
+        \item Item 3
+        \item Item 4
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\section{Pauses}
+\begin{frame}{Pauses}
+    This slide includes \pause a pause.
+\end{frame}
+
+\section{Highlighting}
+\begin{frame}{Highlighting}
+  This is \alert{highlighted} text.
+\end{frame}
+
+\section{Images and Figures}
+\begin{frame}{Images and Figures}
+  \begin{figure}
+    \centering
+    \includegraphics[width=.6\textwidth]{vu-beamer/assets/VU-avatar-RGB.png}
+    \caption{Image Sample}
+  \end{figure}
+\end{frame}
+
+\section{Tables}
+\begin{frame}{Tables}
+  \begin{table}
+    \centering
+    \begin{tabular}{l|c}
+    Header 1 & Header 2 \\
+    \hline
+    Item 1 & Item 2 \\
+    Item 3 & Item 4 \\
+    \end{tabular}
+    \caption{Table Sample}
+  \end{table}
+\end{frame}
+
+\end{document}

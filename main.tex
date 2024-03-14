@@ -10,10 +10,7 @@
 }
 
 
-% Remove navigation symbols (such as slide navigation arrows)
-\setbeamertemplate{navigation symbols}{}
-
-\mode<presentation>{\usetheme[verticalbar=false]{vu}}
+\mode<presentation>{\usetheme{vu}}
 
 
 % Settings for the bibliography
@@ -32,29 +29,6 @@
 \addbibresource{AI-BIPTO.bib}
 \setlength\bibitemsep{0.3cm}
 
-% Changes citation format in footnotes
-\renewcommand{\cite}[1]{\footnote<.->[frame]{\fullcite{#1}}}
-
-% A command to include an image with specified width at an absolute position
-\newcommand{\absimage}[4][0.5,0.5]{%
-	\begin{textblock}{#3}%width
-		[#1]% alignment anchor within image (centered by default)
-		(#2)% position on the page (origin is top left)
-		\includegraphics[width=#3\paperwidth]{#4}%
-\end{textblock}}
-
-% A command for footnote mininomen
-\newcommand{\mininomen}[2][1]{{\let\thefootnote\relax%
-	\footnotetext{\begin{tabular}{*{#1}{@{\!}>{\centering\arraybackslash}p{1em}@{\;}p{\textwidth/#1-2em}}}%
-	#2\end{tabular}}}}
-
-% Adjustment to handling of footnotes, solving issue of spurious empty pages before frames with footnotes
-\setbeamertemplate{footnote}{%
-  \makebox[1em][l]{\insertfootnotemark}%
-  \begin{minipage}{\dimexpr\linewidth-1em}
-    \usebeamerfont{footnote}\insertfootnotetext
-  \end{minipage}\vskip 0pt}
-
 
 \title[VU Beamer slides]{
 Beamer template using the corporate identity \\ of the Vrije Universiteit Amsterdam
@@ -65,10 +39,10 @@ Beamer template using the corporate identity \\ of the Vrije Universiteit Amster
 \inst{2} Centrum van Wiskunde en Informatica, The Netherlands
 }
 \author[Lan et al.]{
-  \textbf{Leon Lan}\inst{1}
+  Leon Lan\inst{1}
   \and
   Joost Berkhout\inst{1}
-  \and \\ % Line break
+  \and \\
   Sandjai Bhulai\inst{1}
   \and
   Rob van der Mei\inst{1,2}
@@ -77,7 +51,7 @@ Beamer template using the corporate identity \\ of the Vrije Universiteit Amster
 
 \begin{document}
 {
-\setbeamertemplate{footline}{\usebeamertemplate*{minimal footline}}
+\setbeamertemplate{footline}
 \frame{\titlepage}
 }
 

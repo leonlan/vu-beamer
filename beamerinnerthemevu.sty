@@ -3,19 +3,21 @@
 \def\beamer@andinst{\\[0.2em]}
 
 \defbeamertemplate*{title page}{}{
-	\begin{center}
-		\vspace{1.5cm}                          % Add vertical space
-		{\color{vuBlue}\Large\inserttitle}\\    % Insert title in large font, colored 'vuBlue'
-		\vspace{0.5cm}                          % Add vertical space
-		{\small\insertauthor}\\                 % Insert author(s) in small font size
-		\vspace{0.5cm}                          % Add vertical space
-		{\scriptsize\insertinstitute}\\         % Insert institute in scriptsize font size
-		\vspace{0.5cm}                          % Add vertical space
-		{\scriptsize\insertdate}                % Insert date in scriptsize font size
-	\end{center}
+\begin{minipage}[b][0.75\paperheight]{\textwidth}
+\begin{center}
+	{\color{vuBlue}\Large\inserttitle}\\    % Insert title in large font, colored 'vuBlue'
+	\vspace{0.5cm}                          % Add vertical space
+	{\small\insertauthor}\\                 % Insert author(s) in small font size
+	\vspace{0.5cm}                          % Add vertical space
+	{\scriptsize\insertinstitute}\\         % Insert institute in scriptsize font size
+	\vspace{0.5cm}                          % Add vertical space
+	{\scriptsize\insertdate}                % Insert date in scriptsize font size
+\end{center}
+\end{minipage}
 }
 
 
+\setbeamertemplate{navigation symbols}{} % no nav symbols
 \setbeamertemplate{items}[circle]
 \setbeamertemplate{sections/subsections in toc}[circle]
 

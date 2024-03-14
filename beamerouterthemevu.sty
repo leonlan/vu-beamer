@@ -34,14 +34,16 @@
 	\leavevmode
 	\begin{beamercolorbox}[wd=\paperwidth,ht=4ex,dp=2.5ex,center]{date in head/foot}
 	\begin{columns}[t]
-	\column{.20\textwidth}
+	\column{.15\textwidth}
 	\begin{minipage}[c]{2cm}
 	\textcolor{white}{\includegraphics[width=1cm]{vu-logo.png}}  % Insert logo image
     \vspace{0.11cm}
 	\end{minipage}
+	\column{.15\textwidth}
+	\insertshortauthor
 	\column{.40\textwidth}
-	\insertshortauthor : \insertshorttitle
-	\column{.20\textwidth}
+	\insertshorttitle
+	\column{.10\textwidth}
 	\hfill \insertframenumber{} / \inserttotalframenumber  % Insert page count
 	\end{columns}
 	\end{beamercolorbox}

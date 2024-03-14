@@ -12,7 +12,8 @@ for more information on VU's corporate identity (huisstijl).
 
 
 # Presentation tips
-- See beamer chapter 5 (TODO)
+- See beamer chapter 5 (TODO) https://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf for some very helpful tips about presenting
+
 
 # Credits
 Based on `tudelft-beamer` and earlier versions by Erwin Walraven and Maarten Abbink.

@@ -1,7 +1,7 @@
 \documentclass[aspectratio=43]{beamer}
 
-\usepackage[english]{babel}  % Set language as English
-\usepackage{graphicx}  % To include graphics
+\usepackage[english]{babel}
+\usepackage{graphicx}
 \usepackage{
   amsmath,
   amssymb,
@@ -9,27 +9,9 @@
   mathtools
 }
 
-
 \mode<presentation>{\usetheme{vu}}
 
-
-% Settings for the bibliography
-\usepackage[
-    backend=biber,
-    giveninits=true,
-    maxnames=30,
-    maxcitenames=20,
-    uniquename=init,
-    url=true,
-    style=authoryear,
-    date=year,
-    doi=false, % disable showing DOI
-    isbn=false, % disable showing ISBN
-]{biblatex}
-\addbibresource{AI-BIPTO.bib}
-\setlength\bibitemsep{0.3cm}
-
-
+% Title page information
 \title[VU Beamer template using corporate identity]{
 Beamer template using the corporate identity \\ of the Vrije Universiteit Amsterdam
 }
@@ -49,14 +31,13 @@ Beamer template using the corporate identity \\ of the Vrije Universiteit Amster
 }
 \date{\today}
 
-\begin{document}
-{
-\setbeamertemplate{footline}
-\frame{\titlepage}
-}
 
-\begin{frame}{A random section}
-  This is a random section.
+\begin{document}
+
+% Title page
+\begin{frame}
+  \setbeamertemplate{footline}
+  \frame{\titlepage}
 \end{frame}
 
 
@@ -101,12 +82,60 @@ and this is an ordered list:
     \end{exampleblock}
 \end{frame}
 
+% Multicol frame
+\section{Multicolumns in Beamer}
+\begin{frame}{Multicolumns in Beamer}
+  \begin{columns}[T] % The "c" option is for center
+    \begin{column}{.5\textwidth}
+      \begin{itemize}
+        \item Item 1
+        \item Item 2
+      \end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \begin{enumerate}
+        \item Item 3
+        \item Item 4
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+\end{frame}
 
-% Bibliography frame
-\begin{frame}[allowframebreaks,t]{\bibname}
-	% the 'I' is caused by 'allowframebreaks'
-	\AtNextBibliography{\footnotesize}% or in the preamble \AtBeginBibliography{\small}
-	\printbibliography
+% Using pauses
+\section{Pauses in Beamer}
+\begin{frame}{Pauses in Beamer}
+    This slide includes \pause a pause.
+\end{frame}
+
+% Highlighting
+\section{Highlighting in Beamer}
+\begin{frame}{Highlighting in Beamer}
+  This is \alert{highlighted} text.
+\end{frame}
+
+% Images & Figures
+\section{Images and Figures in Beamer}
+\begin{frame}{Images and Figures in Beamer}
+  \begin{figure}
+    \centering
+    \includegraphics[width=.6\textwidth]{assets/VU-avatar-RGB.png}
+    \caption{Image Sample}
+  \end{figure}
+\end{frame}
+
+% Tables
+\section{Tables in Beamer}
+\begin{frame}{Tables in Beamer}
+  \begin{table}
+    \centering
+    \begin{tabular}{l|c}
+    Header 1 & Header 2 \\
+    \hline
+    Item 1 & Item 2 \\
+    Item 3 & Item 4 \\
+    \end{tabular}
+    \caption{Table Sample}
+  \end{table}
 \end{frame}
 
 \end{document}

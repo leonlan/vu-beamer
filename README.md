@@ -1,11 +1,8 @@
 # VU Beamer slides
 $\LaTeX$ Beamer template in Vrije Universiteit Amsterdam's corporate identity (_huisstijl_). 
-See [VU Brandportal](https://brandportal.vu.nl/modules/product/DigitalStyleGuide/default/grouplist.aspx?ItemId=6739&iflc=en&ifcltr=en)
-for more information on VU's branding.
-
 
 ## How to use
-### New project in Overleaf
+### As a new project in Overleaf
 [Download](https://github.com/leonlan/vu-beamer/archive/refs/heads/main.zip) this repository as a zip file and upload it to Overleaf. 
 See `main.pdf` for an example.
 
@@ -29,5 +26,8 @@ Here is a minimal example that should work:
 
 
 
-## Presentation tips
+## Other
 - See Chapter 5 of [Beamer user guide](https://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf) for very helpful tips about presenting.
+- See [VU Brandportal](https://brandportal.vu.nl/modules/product/DigitalStyleGuide/default/grouplist.aspx?ItemId=6739&iflc=en&ifcltr=en)
+for more information on VU's branding.
+

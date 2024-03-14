@@ -1,5 +1,5 @@
 # VU Beamer slides
-$\LaTeX$ Beamer template in Vrije Universiteit Amsterdam's corporate identity (_huisstijl_). 
+$\LaTeX$ Beamer template using the corporate identity (_huisstijl_) of Vrije Universiteit Amsterdam. 
 
 ## How to use
 ### As a new project in Overleaf

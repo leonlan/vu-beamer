@@ -29,5 +29,4 @@ Here is a minimal example that should work:
 ## Other
 - See Chapter 5 of [Beamer user guide](https://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf) for very helpful tips about presenting.
 - See [VU Brandportal](https://brandportal.vu.nl/modules/product/DigitalStyleGuide/default/grouplist.aspx?ItemId=6739&iflc=en&ifcltr=en)
-for more information on VU's branding.
-
+for more information on VU's branding. Or see [this](https://vu.nl/nl/over-de-vu/meer-over/huisstijl) link (in Dutch). 
